@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="fill_parent" -->
+<!-- android:orientation="vertical" > -->
+
+<!-- <TextView -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:text="@string/hello" /> -->
+
+<!-- </LinearLayout> -->
+<!--<android.gesture.GestureOverlayView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gestures"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:gestureStrokeType="single"
+    android:eventsInterceptionEnabled="true"
+    android:orientation="horizontal" >
+
+--><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+  <LinearLayout
+        android:id="@+id/spinnerRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:minWidth="80dp"
+          android:text="@string/wijk"
+          android:textAlignment="gravity"
+          android:textSize="18sp" />
+    
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRow"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnVorige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="5dip"
+        android:text="@string/vorige"
+        android:textSize="10dp" />
+    
+    <Button
+        android:id="@+id/btnHuidige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dip"
+        android:text="@string/huidig"
+        android:textSize="10dp" />
+    
+    <Button
+        android:id="@+id/btnVolgende"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="5dip"
+        android:text="@string/volgende"
+        android:textSize="10dp" />
+<!--
+    
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"        
+        android:text="@string/startnotificatie" android:textSize="10dp" />
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"        
+        android:text="@string/startnotificatie" android:textSize="10dp" />
+--></LinearLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRow"
+        android:layout_marginTop="20dip"
+        android:text="@string/vandaag" />
+
+    <TextView
+        android:id="@+id/vandaag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dip"
+        android:layout_alignBottom="@id/label"
+        android:layout_toRightOf="@id/label" />
+
+    <TextView
+        android:id="@+id/weeklabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/label"
+        android:layout_marginTop="20dip"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/weekwaarde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="5dip"
+        android:layout_below="@id/weeklabel"
+        android:textSize="11sp" />
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="20dip"
+        android:layout_below="@id/weekwaarde" />
+    
+
+    <TextView
+        android:id="@+id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weekwaarde"
+        
+        android:layout_marginTop="20dip"
+        android:text="@string/no_data" />
+
+    <!-- <Button -->
+    <!-- android:id="@+id/ok" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_below="@id/entry" -->
+    <!-- android:layout_marginLeft="10dip" -->
+    <!-- android:text="OK" /> -->
+
+
+    <!-- <Button -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignTop="@id/ok" -->
+    <!-- android:layout_toLeftOf="@id/ok" -->
+    <!-- android:text="Cancel" /> -->
+
+
+</RelativeLayout>
+<!--</android.gesture.GestureOverlayView> -->
