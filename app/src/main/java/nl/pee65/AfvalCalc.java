@@ -202,6 +202,16 @@ public class AfvalCalc {
 				list1.add(afvalOphaalMoment);
 			}
 		}
+		List<AfvalOphaalMoment> listWeekEerder = calcMomenten(weekEerder(calGevraagd));
+		for (AfvalOphaalMoment afvalOphaalMoment : listWeekEerder) {
+			Date date = afvalOphaalMoment.getOphaaldag();
+			GregorianCalendar cal2 = getNewCal(true);
+			cal2.setTime(date);
+			int dagnr = cal2.get(Calendar.DAY_OF_WEEK);
+			if ((dagnr == Calendar.SATURDAY || dagnr == Calendar.SUNDAY )&& isNaarAchterTovEigenlijk(afvalOphaalMoment)) {
+				list1.add(afvalOphaalMoment);
+			}
+		}
 		return list1;
 	}
 
@@ -212,11 +222,25 @@ public class AfvalCalc {
 		return c;
 	}
 
+	private Calendar weekEerder(Calendar calGevraagd) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(calGevraagd.getTime());
+		c.add(Calendar.WEEK_OF_YEAR,-1);
+		return c;
+	}
+
 	private boolean isNaarVorenTovEigenlijk(AfvalOphaalMoment mom) {
 		if(mom.getEigenlijkeOphaaldag()==null){
 			return false;
 		}
 		return mom.getEigenlijkeOphaaldag().compareTo(mom.getOphaaldag())>0;
+	}
+
+	private boolean isNaarAchterTovEigenlijk(AfvalOphaalMoment mom) {
+		if(mom.getEigenlijkeOphaaldag()==null){
+			return false;
+		}
+		return mom.getEigenlijkeOphaaldag().compareTo(mom.getOphaaldag())<0;
 	}
 
 	private List<AfvalOphaalMoment> calcMomenten(Calendar calGevraagd) {
