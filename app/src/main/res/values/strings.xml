@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, AfvalRoosterActivity!</string>
-    <string name="app_name">Afvalrooster Gouda 2015&#8211;2016</string>
+    <string name="app_name">Afvalrooster Gouda</string>
     
     <string name="vandaag">Vandaag is het </string>
     <string name="komendeweek">Toekomstige week:</string>    

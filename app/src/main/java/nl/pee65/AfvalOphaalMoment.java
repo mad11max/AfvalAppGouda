@@ -73,6 +73,7 @@ public class AfvalOphaalMoment implements Comparable<AfvalOphaalMoment> {
         if (another == null) {
             return 1;
         }
+
         if (!ophaaldag.equals(another.ophaaldag)) {
             return ophaaldag.compareTo(another.ophaaldag);
         }

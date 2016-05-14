@@ -212,6 +212,7 @@ public class AfvalCalc {
 				list1.add(afvalOphaalMoment);
 			}
 		}
+		Collections.sort(list1);
 		return list1;
 	}
 
