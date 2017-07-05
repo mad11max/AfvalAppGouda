@@ -112,7 +112,7 @@ public class AfvalCalc {
 		}
 
 		// plastic wordt door heel gouda gedaan om de week
-		weeknrmap.put(AFVALTYPE.ORANJE, wijk.isOranjeEven() );
+		weeknrmap.put(AFVALTYPE.ORANJE, true );
 		dagvanweekmap.put(AFVALTYPE.ORANJE, wijk.getOranjeDag());
 		uitzonderingmap = wijk.getUitzonderingen();
 	}
@@ -255,7 +255,7 @@ public class AfvalCalc {
             boolean b = entry.getValue();
             Log.d(getClass().getSimpleName(),entry.getKey()+" -> "+b);
 			List<Integer> weeknrs = getWeeknrs(calGevraagd, b);
-			if(isZakWijk && entry.getKey()==AFVALTYPE.ZAK){
+			if((isZakWijk && entry.getKey()==AFVALTYPE.ZAK) || entry.getKey()==AFVALTYPE.ORANJE){
 				weeknrs=alle;
 			}
 			if (weeknrs.contains(weeknr)) {

@@ -76,7 +76,7 @@ public enum Wijk {
 
     private boolean groenEven;
     private boolean blauwEven;
-    private  boolean oranjeEven;
+   // private  boolean oranjeEven;
     private boolean grijsEven;
     private boolean zakEven;
     private boolean zakOneven;
@@ -92,7 +92,7 @@ public enum Wijk {
         this.zakDag = zakDag;
         this.groenEven = groenEven;
         this.blauwEven = blauwEven;
-        this.oranjeEven = oranjeEven;
+        //this.oranjeEven = oranjeEven;
         this.grijsEven = grijsEven;
         this.zakEven = zakEven;
         this.zakOneven = zakOneven;
@@ -149,9 +149,9 @@ public enum Wijk {
 
 
 
-    public boolean isOranjeEven() {
-        return oranjeEven;
-    }
+//    public boolean isOranjeEven() {
+//        return oranjeEven;
+//    }
 
 
 
