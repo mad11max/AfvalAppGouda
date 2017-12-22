@@ -19,31 +19,46 @@ import android.util.Log;
  *
  */
 public enum Wijk {
-    PLASWIJK(  Calendar.WEDNESDAY , Calendar.MONDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, Calendar.TUESDAY,false,false,true,true,false,false,"21-4-2014=19-4-2014, 29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 06-04-2015=04-04-2015, 14-05-2015=16-05-2015")
-    //                  groen             blauw                oranje             grijs          zak      even groe  blau  ora grij  zak  zakon
-    , BLOEMENDAAL(Calendar.WEDNESDAY , Calendar.MONDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, Calendar.FRIDAY,false,true,false,true,false,false,"9-6-2014=7-6-2014, 27-04-2015=25-04-2015,25-05-2015=30-05-2015")
+    PLASWIJK(  Calendar.MONDAY , Calendar.THURSDAY, Calendar.TUESDAY, Calendar.MONDAY,       0,         !false,false,true,!true,false,false,"21-4-2014=19-4-2014, 29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 06-04-2015=04-04-2015, 14-05-2015=16-05-2015")
+    //                  groen             blauw                oranje           grijs      zak      even groe,  blau ,ora,grij,zak,zakon
 
-    , GOUDA_NOORD(Calendar.TUESDAY , Calendar.MONDAY, Calendar.TUESDAY, Calendar.TUESDAY, Calendar.FRIDAY,false,true,false,true,false,false,"9-6-2014=7-6-2014, 27-04-2015=25-04-2015, 05-05-2015=09-05-2015, 25-05-2015=30-05-2015")
 
-    , ACHTERWILLENS(Calendar.TUESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.TUESDAY, Calendar.FRIDAY,false,!false,true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 05-05-2015=09-05-2015, 25-12-2015=19-12-2015")
 
-    , NIEUWE_PARK(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, Calendar.FRIDAY,false,!false,true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
 
-    , BINNENSTAD_NOORD(0     , 0   , Calendar.WEDNESDAY,0                               , Calendar.MONDAY,false,false,true,true,true,true,"21-4-2014=22-4-2014, 9-6-2014=10-6-2014, 24-12-2014=23-12-2014, 05-05-2015=06-05-2015")
+    , BLOEMENDAAL(Calendar.MONDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.MONDAY, 0,               !false,true,false,!true,false,false,"9-6-2014=7-6-2014, 27-04-2015=25-04-2015,25-05-2015=30-05-2015")
 
-    , KORT_HAARLEM(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, Calendar.FRIDAY,false,!false,true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
 
-    , GOUDA_OOST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, Calendar.TUESDAY,false,false,!true,true,false,false,"05-05-2015=09-05-2015")
+    , GOUDA_NOORD(Calendar.WEDNESDAY , Calendar.TUESDAY, Calendar.THURSDAY, 0, 0,                        !false,true,false,!true,false,false,"9-6-2014=7-6-2014, 27-04-2015=25-04-2015, 05-05-2015=09-05-2015, 25-05-2015=30-05-2015")
 
-    , GOVERWELLE_WEST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, Calendar.TUESDAY,false,false,!true,true,false,false,"05-05-2015=09-05-2015")
 
-    , GOVERWELLE_OOST(Calendar.THURSDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.THURSDAY, Calendar.TUESDAY,false,!false,!true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014,01-01-2015=03-01-2015,14-05-2015=16-05-2015,05-05-2015=09-05-2015, 25-12-2015=19-12-2015")
+    , ACHTERWILLENS(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, 0      ,!false,!false,true,!true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 05-05-2015=09-05-2015, 25-12-2015=19-12-2015")
 
-    , BINNENSTAD_ZUID(0   , 0 , Calendar.WEDNESDAY, 0                                    , Calendar.MONDAY,false,false,true,true,true,true,"21-4-2014=22-4-2014, 9-6-2014=10-6-2014, 24-12-2014=23-12-2014, 06-04-2015=07-04-2015, 27-04-2015=28-04-2015, 25-05-2015=26-05-2015")
 
-    , KORTE_AKKEREN(Calendar.MONDAY , Calendar.THURSDAY, Calendar.TUESDAY, Calendar.MONDAY, Calendar.FRIDAY,false,false,!true,true,false,false,"21-4-2014=19-4-2014, 9-6-2014=7-6-2014, 01-01-2015=03-01-2015,06-04-2015=04-04-2015,27-04-2015=25-04-2015, 05-05-2015=09-05-2015, 25-05-2015=30-05-2015")
+    , NIEUWE_PARK(Calendar.MONDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.MONDAY, 0              ,!false,false,true,!true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
 
-    , STOLWIJKERSLUIS(Calendar.THURSDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.THURSDAY, Calendar.TUESDAY,false,false,!true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 01-01-2015=03-01-2015,05-05-2015=09-05-2015, 14-05-2015=16-05-2015");
+
+    , BINNENSTAD_NOORD(0     , 0   , Calendar.WEDNESDAY,0                               , 0,            !false,false,true,!true,true,true,"21-4-2014=22-4-2014, 9-6-2014=10-6-2014, 24-12-2014=23-12-2014, 05-05-2015=06-05-2015")
+
+
+    , KORT_HAARLEM(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY,0       ,false,!false,true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
+
+
+    , GOUDA_OOST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY,0,0                            ,!false,!false,!true,true,false,false,"05-05-2015=09-05-2015")
+
+
+    , GOVERWELLE_WEST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, 0    ,!false,!false,!true,!true,false,false,"05-05-2015=09-05-2015")
+
+
+    , GOVERWELLE_OOST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, 0     ,!false,false,!true,!true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014,01-01-2015=03-01-2015,14-05-2015=16-05-2015,05-05-2015=09-05-2015, 25-12-2015=19-12-2015")
+
+
+    , BINNENSTAD_ZUID(0   , 0 , Calendar.WEDNESDAY, 0                                    ,Calendar.MONDAY              ,false,false,true,true,true,true,"21-4-2014=22-4-2014, 9-6-2014=10-6-2014, 24-12-2014=23-12-2014, 06-04-2015=07-04-2015, 27-04-2015=28-04-2015, 25-05-2015=26-05-2015")
+
+
+    , KORTE_AKKEREN(Calendar.WEDNESDAY , Calendar.TUESDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, 0      ,!false,false,!true,!true,false,false,"21-4-2014=19-4-2014, 9-6-2014=7-6-2014, 01-01-2015=03-01-2015,06-04-2015=04-04-2015,27-04-2015=25-04-2015, 05-05-2015=09-05-2015, 25-05-2015=30-05-2015")
+
+
+    , STOLWIJKERSLUIS(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, 0      ,!false,!false,!true, false,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 01-01-2015=03-01-2015,05-05-2015=09-05-2015, 14-05-2015=16-05-2015");
 
 
     private int groenDag;

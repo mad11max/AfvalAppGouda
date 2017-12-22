@@ -34,7 +34,7 @@ public class AfvalCalc {
 	private HashMap<AFVALTYPE, Boolean> weeknrmap;
 	private Map<AFVALTYPE, Integer> dagvanweekmap;
 
-	private int IJKJAAR = 2015;
+	private int IJKJAAR = 2018;
 	// rooster volgend jaar is pas bekend aan eind van jaar
 
 	private Wijk wijk;// = Wijk.PLASWIJK

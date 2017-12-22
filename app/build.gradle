@@ -8,8 +8,8 @@ android {
         applicationId "nl.pee65"
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 18
-        versionName "1.7.2"
+        versionCode 19
+        versionName "1.8"
     }
     buildTypes {
         release {
