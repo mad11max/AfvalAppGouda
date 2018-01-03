@@ -21,7 +21,7 @@ public class AfvalCalc {
 	public static final String DATEPATTERN_DD_MM_YYYY = "dd-MM-yyyy";
 	public static final String DATEPATTERN_D_M_YYYY = "d-M-yyyy";
 	public static final String DATEPATTERN_EEEE_DD_MM_YYYY = "EEEE dd-MM-yyyy";
-    public static final String DATEPATTERN_DAGNAAM = "E";
+    public static final String DATEPATTERN_DAGNAAM = "EEEE";
 
 	/** The Constant MAX_WEEKNR inclusive. */
 	public static final int MAX_WEEKNR = 54;

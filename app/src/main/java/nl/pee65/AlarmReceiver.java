@@ -136,7 +136,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.drawable.afval)
+                        .setSmallIcon(R.drawable.ic_stat_delete)
                         .setContentTitle(createttitle(d,momenten))
                         .setContentText(createtext(d,momenten)).setContentIntent(intent);
 
@@ -166,14 +166,15 @@ public class AlarmReceiver extends BroadcastReceiver {
     }
 
     private String createttitle(Date d, List<AfvalOphaalMoment> momenten) {
-        StringBuilder b = new StringBuilder();
-        b.append(calc.dagNaam(d));
-        b.append(": ");
-        for (AfvalOphaalMoment m : momenten) {
-            b.append(m.getAfvaltype().name());
-            b.append(" ");
-        }
-        return b.toString().trim();
+        return "Afval-alert";
+//        StringBuilder b = new StringBuilder();
+//        b.append(calc.dagNaam(d));
+//        b.append(": ");
+//        for (AfvalOphaalMoment m : momenten) {
+//            b.append(m.getAfvaltype().name());
+//            b.append(" ");
+//        }
+//        return b.toString().trim();
     }
 
 
