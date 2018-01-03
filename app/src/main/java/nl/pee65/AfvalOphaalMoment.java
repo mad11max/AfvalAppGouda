@@ -1,9 +1,13 @@
 
 package nl.pee65;
 
+import android.text.format.DateUtils;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AfvalOphaalMoment implements Comparable<AfvalOphaalMoment> {
+    private static final String FMT = "dd-MM-yyyy";
     private AFVALTYPE afvaltype;
     private Date ophaaldag;
     private Date eigenlijkeOphaaldag;
@@ -31,7 +35,7 @@ public class AfvalOphaalMoment implements Comparable<AfvalOphaalMoment> {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((afvaltype == null) ? 0 : afvaltype.hashCode());
-        result = prime * result + ((ophaaldag == null) ? 0 : ophaaldag.hashCode());
+        result = prime * result + ((ophaaldag == null) ? 0 : new SimpleDateFormat(FMT).format(ophaaldag).hashCode());
         return result;
     }
     @Override
@@ -53,7 +57,7 @@ public class AfvalOphaalMoment implements Comparable<AfvalOphaalMoment> {
             if (other.ophaaldag != null) {
                 return false;
             }
-        } else if (!ophaaldag.equals(other.ophaaldag)) {
+        } else if (!( new SimpleDateFormat(FMT).format(ophaaldag).equals( new SimpleDateFormat(FMT).format(other.ophaaldag))) ){
             return false;
         }
         return true;

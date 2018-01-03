@@ -79,10 +79,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
+		values.put(GEKOZEN, "0");
+
+		int res = db.update(TABLE, values, null,
+				null);
+		values = new ContentValues();
 		values.put(GEKOZEN, "1");
 
 		// updating row
-		int res = db.update(TABLE, values, NAME + " =? ",
+		 res = db.update(TABLE, values, NAME + " =? ",
 				new String[] { w.name() });
 		log("setWijk to " + w + ", update result is " + res);
 

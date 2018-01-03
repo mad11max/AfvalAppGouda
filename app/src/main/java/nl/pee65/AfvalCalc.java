@@ -21,6 +21,7 @@ public class AfvalCalc {
 	public static final String DATEPATTERN_DD_MM_YYYY = "dd-MM-yyyy";
 	public static final String DATEPATTERN_D_M_YYYY = "d-M-yyyy";
 	public static final String DATEPATTERN_EEEE_DD_MM_YYYY = "EEEE dd-MM-yyyy";
+    public static final String DATEPATTERN_DAGNAAM = "E";
 
 	/** The Constant MAX_WEEKNR inclusive. */
 	public static final int MAX_WEEKNR = 54;
@@ -352,6 +353,7 @@ public class AfvalCalc {
 		cal.setTime(calGevraagd.getTime());
 		cal.set(Calendar.DAY_OF_WEEK, dagnr);
 		log("calcDate, cal is " + cal.getTime());
+
 		Date date = cal.getTime();
 		String s = stringVoor(date);
 		String s2 = stringVoorKort(date);
@@ -384,6 +386,9 @@ public class AfvalCalc {
 		return symbols.getWeekdays()[dagnr];
 	}
 
+	public String dagNaam(Date d) {
+		return new SimpleDateFormat(DATEPATTERN_DAGNAAM, new Locale("nl")).format(d);
+	}
 	public String stringVoorDisplay(Calendar c) {
 		GregorianCalendar cal = getNewCal(true);
 		cal.setTime(c.getTime());
@@ -429,4 +434,9 @@ public class AfvalCalc {
 		return false;
 	}
 
+	public static boolean isAvond(Calendar cal){
+		int uur=cal.get(cal.HOUR_OF_DAY);
+		// ik gebruik 17 ipv 18 voor de zkerheid
+		return uur >=17;
+	}
 }

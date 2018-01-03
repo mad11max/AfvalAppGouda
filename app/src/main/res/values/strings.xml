@@ -18,5 +18,10 @@
     <string name="stopnotificatie">Notif Uit</string>
     <string name="notificatie">Notificatie</string>
     <string name="afvalnotificatie">De volgende bakken:</string>
+    <string name="pref_morgen">Ochtendnotificatie</string>
+    <string name="pref_avond">Avondnotificatie</string>
+
+    <string name="pref_avond_sum">Geef notificatie de avond ervoor</string>
+    <string name="pref_morgen_sum">Geef notificatie in de ochtend</string>
 
 </resources>
