@@ -39,8 +39,9 @@ public enum Wijk {
 
     , BINNENSTAD_NOORD(0     , 0   , Calendar.WEDNESDAY,0                               , 0,            !false,false,true,!true,true,true,"21-4-2014=22-4-2014, 9-6-2014=10-6-2014, 24-12-2014=23-12-2014, 05-05-2015=06-05-2015")
 
+//                  groen             blauw                oranje           grijs           zak      even groe,  blau ,ora,grij,zak,zakon
 
-    , KORT_HAARLEM(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY,0       ,false,!false,true,true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
+    , KORT_HAARLEM(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.THURSDAY, Calendar.WEDNESDAY,0       ,!false,false,true,!true,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 26-12-2014=27-12-2014, 14-05-2015=16-05-2015, 25-12-2015=19-12-2015")
 
 
     , GOUDA_OOST(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY,0,0                            ,!false,!false,!true,true,false,false,"05-05-2015=09-05-2015")
