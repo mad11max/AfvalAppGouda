@@ -105,6 +105,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         }
         if(!setje.isEmpty()){
             sendNotification(context,setje);
+
+
         }
     }
 
@@ -112,11 +114,15 @@ public class AlarmReceiver extends BroadcastReceiver {
         Set<AfvalOphaalMoment>  setje = new HashSet<>();
         String dagnaam = calc.dagNaam(calVanBelang.getTime());
         for (AfvalOphaalMoment m:moments  ) {
-            if(calc.dagNaam(m.getOphaaldag()).equals(dagnaam)){
+            if(calc.dagNaam(m.getOphaaldag()).equals(dagnaam) && max48uurVerschil(m.getOphaaldag() ,calVanBelang.getTime())){
                 setje.add(m);
             }
         }
         return setje;
+    }
+
+    private boolean max48uurVerschil(Date d1, Date d2){
+        return true;
     }
 
     public void sendNotification(Context context, Set<AfvalOphaalMoment> moments) {
