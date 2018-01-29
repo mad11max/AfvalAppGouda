@@ -28,6 +28,7 @@ import java.util.Set;
  */
 public class AlarmReceiver extends BroadcastReceiver {
 
+    private static final long ACHTENVEERTIG_UUR = 48 *60*60*1000L;
     AfvalCalc calc;
     DatabaseHandler db;
     boolean avond = false;
@@ -122,7 +123,8 @@ public class AlarmReceiver extends BroadcastReceiver {
     }
 
     private boolean max48uurVerschil(Date d1, Date d2){
-        return true;
+        return
+                Math.abs(d1.getTime()-d2.getTime()) < ACHTENVEERTIG_UUR;
     }
 
     public void sendNotification(Context context, Set<AfvalOphaalMoment> moments) {
