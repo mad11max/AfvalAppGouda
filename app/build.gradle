@@ -1,15 +1,21 @@
 apply plugin: 'com.android.application'
-
+allprojects {
+    repositories {
+        maven {
+             url 'https://maven.google.com'
+         }
+    }
+}
 android {
-    compileSdkVersion 23
+    compileSdkVersion 27
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "nl.pee65"
-        minSdkVersion 9
-        targetSdkVersion 23
-        versionCode 22
-        versionName "2.2"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 23
+        versionName "2.3"
     }
     buildTypes {
         release {
@@ -22,11 +28,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
 }
 dependencies {
-    compile 'com.google.android.gms:play-services:8.4.0'
-    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.google.android.gms:play-services:11.0.4'
+    compile 'com.android.support:support-v13:27.1.1'
 
 }
 
