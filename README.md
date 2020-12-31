@@ -6,3 +6,4 @@ It takes into account the exceptions like Eastern, Christmas and such.
 
 It can be found in the Play store using searchterm:
 'Afvalrooster Gouda'.
+
