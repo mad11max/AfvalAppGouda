@@ -7,15 +7,15 @@ allprojects {
     }
 }
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "nl.pee65"
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 31
         multiDexEnabled true
-     versionCode 33
-        versionName "3.3"
+     versionCode 34
+        versionName "3.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
