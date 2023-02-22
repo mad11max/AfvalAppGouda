@@ -121,24 +121,24 @@ ID advertentieblok: ca-app-pub-3759259204535951/4445045820*/
     // private static final int SWIPE_MAX_OFF_PATH = 250;
     // private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // TODO Auto-generated method stub
-        menu.add(Menu.NONE, 0, 0, "Settings");
-        return super.onCreateOptionsMenu(menu);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // TODO Auto-generated method stub
+//        menu.add(Menu.NONE, 0, 0, "Settings");
+//        return super.onCreateOptionsMenu(menu);
+//    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case 0:
-                startActivity(new Intent(this, PrefActivity.class));
-                return true;
-
-
-        }
-        return false;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case 0:
+//                startActivity(new Intent(this, PrefActivity.class));
+//                return true;
+//
+//
+//        }
+//        return false;
+//    }
 
     @Override
     protected void onStop() {
@@ -167,7 +167,7 @@ ID advertentieblok: ca-app-pub-3759259204535951/4445045820*/
         if (wijk != null) {
 
             continueer();
-            DeviceBootReceiver.zetalarm(App.getContext());
+            //DeviceBootReceiver.zetalarm(App.getContext());
         } else {
             String s = "Kies een wijk a.u.b.";
             Toast toast = Toast.makeText(this, s, Toast.LENGTH_LONG);
@@ -348,9 +348,9 @@ ID advertentieblok: ca-app-pub-3759259204535951/4445045820*/
                 initRepresnetanten();
                 break;
         }
-        SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(this);
-        Log.d(getClass().getSimpleName(),"en prefmorgen: "+prefs.getBoolean("pref_morgen",false));
-        Log.d(getClass().getSimpleName(),"en prefavond: "+prefs.getBoolean("pref_avond",false));
+       // SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(this);
+       // Log.d(getClass().getSimpleName(),"en prefmorgen: "+prefs.getBoolean("pref_morgen",false));
+       // Log.d(getClass().getSimpleName(),"en prefavond: "+prefs.getBoolean("pref_avond",false));
         fillData();
     }
 
