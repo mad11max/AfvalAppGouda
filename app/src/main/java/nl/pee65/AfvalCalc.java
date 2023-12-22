@@ -259,10 +259,11 @@ public class AfvalCalc {
             boolean b = entry.getValue();
             Log.d(getClass().getSimpleName(), entry.getKey() + " -> " + b);
             if (!heeftWijkDezeWel(entry.getKey())) {
+                Log.d(getClass().getSimpleName(), "!heeftWijkDezeWel(entry.getKey() " + entry.getKey());
                 continue;
             }
             List<Integer> weeknrs = getWeeknrs(calGevraagd, b);
-            if ((isZakWijk && entry.getKey() == AFVALTYPE.ZAK) || entry.getKey() == AFVALTYPE.ORANJE) {
+            if ((isZakWijk && entry.getKey() == AFVALTYPE.ZAK) || entry.getKey() == AFVALTYPE.ORANJE || heeftWijkDezeToevalligAltijd(entry.getKey())) {
                 weeknrs = alle;
             }
             if (weeknrs.contains(weeknr)) {
@@ -282,11 +283,22 @@ public class AfvalCalc {
     }
 
     private boolean heeftWijkDezeWel(AFVALTYPE key) {
+        //Log.d(getClass().getSimpleName(),key + ",      wijk.getUitzonderingen() " + wijk.getUitzonderingen());
         boolean b = wijk.getUitzonderingen().containsKey(key.name());
         if (b) {
             return !wijk.getUitzonderingen().get(key.name()).equals("false");
         }
         return true;
+    }
+
+    private boolean heeftWijkDezeToevalligAltijd(AFVALTYPE key) {
+
+        boolean b = wijk.getUitzonderingen().containsKey(key.name());
+        if (b) {
+            Log.d(getClass().getSimpleName(),key + ",     heeftWijkDezeToevalligAltijd" + wijk.getUitzonderingen().get(key.name()));
+            return wijk.getUitzonderingen().get(key.name()).equals("altijd");
+        }
+        return false;
     }
 
     private List<Integer> getWeeknrs(Calendar calGevraagd, Boolean even) {
@@ -327,11 +339,11 @@ public class AfvalCalc {
                 GregorianCalendar gcal = getNewCal(true, i, 1, 1);
 
                 int maxweek = gcal.getActualMaximum(gcal.WEEK_OF_YEAR);
-                log("maxweek van " + i + " is " + maxweek);
+
                 aantal += maxweek;
             }
             if (aantal % 2 != 0) {
-                log("ja een inverrs van " + b + " , dus " + !b);
+
                 return !b;
             }
         }
