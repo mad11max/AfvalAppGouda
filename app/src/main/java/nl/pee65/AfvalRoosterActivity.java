@@ -34,6 +34,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.*;
+import com.google.android.gms.ads.admanager.AdManagerAdView;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class AfvalRoosterActivity extends ListActivity implements
         OnItemSelectedListener {
@@ -252,25 +255,34 @@ ID advertentieblok: ca-app-pub-3759259204535951/4445045820*/
         btnVolgende.setOnClickListener(clicklistener2);
 
         initRepresnetanten();
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdManagerAdView adView = new AdManagerAdView(this);
 
-        // Create the adView.
-        adView = new AdView(this);
-        adView.setAdUnitId(MY_AD_UNIT_ID);
-        adView.setAdSize(AdSize.BANNER);
+        adView.setAdSizes(AdSize.BANNER);
 
-        // Lookup your LinearLayout assuming it's been given
-        // the attribute android:id="@+id/mainLayout".
+        adView.setAdUnitId("ca-app-pub-3759259204535951~6991226222");
+//        // Create the adView.
+//        adView = new AdView(this);
+//        adView.setAdUnitId(MY_AD_UNIT_ID);
+//        adView.setAdSize(AdSize.BANNER);
+//
+//        // Lookup your LinearLayout assuming it's been given
+//        // the attribute android:id="@+id/mainLayout".
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.mainlayout);
-
+//
         RelativeLayout.LayoutParams rLParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         rLParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 1);
         // Add the adView to it.
         layout.addView(adView, rLParams);
-
-        // Initiate a generic request.
+//
+//        // Initiate a generic request.
         AdRequest adRequest = new AdRequest.Builder().build();
-
-        // Load the adView with the ad request.
+//
+//        // Load the adView with the ad request.
         adView.loadAd(adRequest);
 
         fillData();

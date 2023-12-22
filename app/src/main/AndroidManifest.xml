@@ -35,9 +35,12 @@
 
             <activity android:name="com.google.android.gms.ads.AdActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3759259204535951~6991226222"/>
 
-      <!--  <activity
-            android:name="nl.pee65.PrefActivity"  android:label="Settings"  android:screenOrientation="portrait" />-->
+        <!--  <activity
+              android:name="nl.pee65.PrefActivity"  android:label="Settings"  android:screenOrientation="portrait" />-->
 
       <!--  <receiver android:name="nl.pee65.AlarmReceiver" android:exported="true">
             <intent-filter>
