@@ -263,7 +263,7 @@ public class AfvalCalc {
                 continue;
             }
             List<Integer> weeknrs = getWeeknrs(calGevraagd, b);
-            if ((isZakWijk && entry.getKey() == AFVALTYPE.ZAK) || entry.getKey() == AFVALTYPE.ORANJE || heeftWijkDezeToevalligAltijd(entry.getKey())) {
+            if ((isZakWijk && entry.getKey() == AFVALTYPE.ZAK) || (entry.getKey() == AFVALTYPE.ORANJE && wijk!=Wijk.STOLWIJKERSLUIS )|| heeftWijkDezeToevalligAltijd(entry.getKey())) {
                 weeknrs = alle;
             }
             if (weeknrs.contains(weeknr)) {

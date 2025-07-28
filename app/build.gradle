@@ -7,14 +7,14 @@ allprojects {
     }
 }
 android {
-    compileSdkVersion 34
+    compileSdk 35
     defaultConfig {
         applicationId "nl.pee65"
         minSdkVersion 19
-        targetSdkVersion 34
+        targetSdk 35
         multiDexEnabled true
-     versionCode 42
-        versionName "4.2"
+     versionCode 44
+        versionName "4.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -28,6 +28,7 @@ android {
         targetCompatibility 1.8
     }
     buildToolsVersion '30.0.3'
+    namespace 'nl.pee65'
 }
 
 dependencies {

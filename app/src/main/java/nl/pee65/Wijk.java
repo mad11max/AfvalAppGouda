@@ -58,8 +58,9 @@ public enum Wijk {
 
     , KORTE_AKKEREN(Calendar.WEDNESDAY , Calendar.TUESDAY, Calendar.THURSDAY, Calendar.WEDNESDAY, 0      ,!false,false,!true,!true,false,false,"21-4-2014=19-4-2014, 9-6-2014=7-6-2014, 01-01-2015=03-01-2015,06-04-2015=04-04-2015,27-04-2015=25-04-2015, 05-05-2015=09-05-2015, 25-05-2015=30-05-2015")
 
-
-    , STOLWIJKERSLUIS(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, 0      ,!false,!false,!true, false,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 01-01-2015=03-01-2015,05-05-2015=09-05-2015, 14-05-2015=16-05-2015");
+//                          groen             blauw                oranje           grijs
+    , STOLWIJKERSLUIS(Calendar.WEDNESDAY , Calendar.FRIDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, 0      , true, false, false, false,false,false,"29-5-2014=31-5-2014, 25-12-2014=20-12-2014, 01-01-2015=03-01-2015,05-05-2015=09-05-2015, 14-05-2015=16-05-2015")
+    ;
 
 
     private int groenDag;
